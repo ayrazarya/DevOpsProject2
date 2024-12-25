@@ -32,6 +32,21 @@
                     <target>15</target>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.3.0</version> <!-- Ganti versi ke 3.2.0 -->
+                <configuration>
+                    <archive>
+                        <manifestEntries>
+                            <!-- Path lengkap ke Main-Class sesuai dengan struktur paket -->
+                            <Main-Class>org.AbsensiMahasiswa.Main</Main-Class>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 </project>
