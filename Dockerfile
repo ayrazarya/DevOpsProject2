@@ -1,4 +1,7 @@
-FROM openjdk:17
-EXPOSE 8080
-ADD target /com.devops.jar
-ENTRYPOINT ["java","-jar","/com.devops.jar"]
+FROM openjdk:21
+
+# Menyalin file JAR yang dihasilkan ke dalam container
+COPY target/com.devops-1.0-SNAPSHOT.jar /com.devops.jar
+
+# Menjalankan aplikasi Java menggunakan JAR
+ENTRYPOINT ["java", "-jar", "/com.devops.jar"]
